@@ -12,7 +12,7 @@ Restaurant.destroy_all
 puts 'Creating Restaurants'
 5.times do
   restaurant = Restaurant.new(name: Faker::Restaurant.name,
-                              address: Faker::Address.street_name, phone_number: Faker::PhoneNumber,
+                              address: Faker::Address.street_name, phone_number: Faker::PhoneNumber.subscriber_number,
                               category: %w[chinese italian japanese french belgian].sample)
   restaurant.save
   puts "Created #{restaurant.name}"
